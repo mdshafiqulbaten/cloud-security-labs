@@ -1,0 +1,44 @@
+ // aws iam create-policy --policy-name Chapter5ReadOnly --
+ policy-document file://policy.json
+
+5.6 Lab 5.1: Explore IAM Safely (Core)
+This lab looks at IAM in your own account and creates one safe, low
+power user. It stays inside the free tier. IAM itself costs nothing.
+
+Step 1. Sign in to your AWS account and open IAM using the search
+bar at the top.
+
+Step 2. On the dashboard, read the security recommendations. Note
+whether it suggests protecting the root user. Do not change anything
+yet.
+
+Step 3. Open the Users section and look at the existing users. Then
+open the Policies section and search for a read only policy for a
+service you recognize, such as storage. Open it and read the plain
+summary of what it allows. You are learning to read permissions.
+
+Step 4. Optional and safe: create a new user with no permissions at all,
+then attach a single read only policy to it. You have just practiced least
+privilege. When finished, delete the user so nothing lingers.
+
+Step 5. Sign out. Write one sentence about the difference between a
+read only policy and an administrator policy.
+
+5.7 Lab 5.2: Plan a Role Instead of a Key (Stretch)
+This lab practices the safest pattern without touching production. No
+changes required.
+
+Step 1. Imagine a small program on an AWS server that must read files
+from one storage bucket and write nothing.
+
+Step 2. Write down the exact permission it needs, then describe the
+role you would create, in plain words: its name, the one permission it
+holds, and the server you would attach it to.
+
+Step 3. Explain in two sentences why this role is safer than creating a
+user and pasting an access key into the program.
+
+Step 4. Keep the note. This is the reasoning you will use every time
+code needs cloud access.
+
+5.8 Check Your Understanding
